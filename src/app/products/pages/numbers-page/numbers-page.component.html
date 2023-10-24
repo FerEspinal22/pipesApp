@@ -1,0 +1,25 @@
+<p-panel header="Pipes básicos" class="p-2">
+  <p>Pipes incluidos en el angolar - Usualmente en el common modole</p>
+</p-panel>
+
+<div class="grid">
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas netas" subheader="del presente año">
+      <!-- Le decimos que queremos de 2 a 4 decimales -->
+      {{ totalSells + 221 | number:'1.2-2' }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas brutas" subheader="del presente año">
+      {{ totalSells | currency:'HNL':'symbol-narrow':'1.4-6' }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ganancia porcentual" subheader="del presente año">
+      {{ percent | percent:'1.2-2' }}
+    </p-card>
+  </div>
+</div>
